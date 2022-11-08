@@ -1,0 +1,80 @@
+:root{
+    --couleurTXT: rgb(176,190,197);
+}
+#bgVid, #content{
+    position: fixed;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#bgVid{
+    filter: grayscale(70%);
+}
+#content{
+    position: absolute;
+    //z-index: 1030;
+    background: rgb(9,175,80);
+    background: linear-gradient(162deg, rgba(9,175,80,1) 10%, rgba(191,54,12,1) 90%);
+    mix-blend-mode: soft-light;
+}
+article{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: var(--couleurTXT);
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0.5rem rgb(38,50,56);
+}
+
+article .btn{
+    font-size: 3rem;
+    padding: 0 2.5rem 0.3rem 2.5rem;
+    border-radius: 1.5rem;
+    border-width: 5px;
+}
+
+.btn-outline-me{
+    color: var(--couleurTXT);
+    border-color: var(--couleurTXT);
+}
+.btn-outline-me:hover{
+    border-color: var(--couleurTXT);
+    background-color: var(--couleurTXT);
+}
+
+footer{
+    color: var(--couleurTXT);
+    background-color: rgba(38,50,56, 0.4);
+}
+footer a, footer a:hover{
+    color: var(--couleurTXT);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#damDiv{
+    top: 20px;
+    right: 0;
+    transition: transform 0.5s;
+    width: 25vw;
+    transform: translateX(25vw);
+    background-color: #0F2437;
+    border: 5px solid #A89457;
+    border-radius: 7vw 0 0 7vw;
+    padding: 0.5rem;
+}
+#damDiv img{
+    width: 7vw;
+}
+#damDiv h2{
+    font-size: 2.3vw;
+    color: #A89457;
+}
+#linkDam:hover #damDiv{
+    transform: translateX(5px);
+}

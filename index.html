@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev jam - Forêts</title>
+    <link rel="icon" type="image/png" href="https://marill.dev/img/minimecool.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <video autoplay muted loop id="bgVid">
+        <source src="images/video.mp4" type="video/mp4">
+    </video>
+    <div id="content">
+    </div>
+    <article class="d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column align-items-center w-75">
+            <h1>Évolution du pourcentage de forêts par pays au cours des années.</h1>
+            <div class="my-5 w-50 d-flex justify-content-around">
+                <a href="html/2D.html"><button type="button" class="btn btn-outline-me"><span class="fas fa-map"></span> 2D</button></a>
+                <a href="html/3D.html"><button type="button" class="btn btn-outline-me"><span class="fas fa-globe"></span> 3D</button></a>
+            </div>
+        </div>
+    </article>
+    <footer class="fixed-bottom w-100 d-flex justify-content-center p-2">
+        <div class="w-50 d-flex justify-content-between">
+            <a data-toggle="modal" data-target=".modalRessource" >ressources</a>
+            <a data-toggle="modal" data-target=".modalPres" >document de présentation</a>
+            <a href="https://marill.dev" target="_blank" id="linkDam">marill.dev
+                <div class="position-fixed d-flex justify-content-between align-items-center pr-3" id="damDiv">
+                    <img src="https://marill.dev/img/minimecool.png">
+                    <h2>Damien Marill</h2>
+                </div>
+            </a>
+        </div>
+    </footer>
+    <div class="modal fade modalRessource" tabinex="-1" role="dialog" aria-labelledby="modalRessource" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title">Ressources</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>JavaScript
+                            <ul>
+                                <a href="https://d3js.org/" target="_blank"><li>D3.js</li></a>
+                                <a href="https://leafletjs.com/" target="_blank"><li>Leaflet</li></a>
+                                <a href="https://github.com/topojson/topojson/wiki" target="_blank"><li>Topojson</li></a>
+                                <a href="https://www.chartjs.org/" target="_blank"><li>Chart.js</li></a>
+                                <a href="https://momentjs.com/" target="_blank"><li>Moment.js</li></a>
+                                <a href="https://jquery.com/" target="_blank"><li>jQuery</li></a>
+                                <a href="https://codepen.io/jorin/pen/YNajXZ" target="_blank"><li>D3 canvas globe by Jorin</li></a>
+                                <a href="https://github.com/ecrmnn/iso-3166-1" target="_blank"><li>iso-3166-1 by ecrmnn</li></a>
+                            </ul>
+                        </li>
+                        <li>CSS
+                            <ul>
+                                <a href="https://getbootstrap.com/" target="_blank"><li>Bootstrap</li></a>
+                                <a href="https://fontawesome.com/" target="_blank"><li>Font Awsome</li></a>
+                                <a href="https://www.materialui.co/colors" target="_blank"><li>Material UI</li></a>
+                                <a href="https://cssgradient.io/" target="_blank"><li>CSS Gradient</li></a>
+                            </ul>
+                        </li>
+                        <li>Données
+                            <ul>
+                                <a href="https://data.worldbank.org/indicator/AG.LND.FRST.ZS?end=2016&start=1990" target="_blank"><li>The world bank</li></a>
+                                <a href="https://geojson.org/" target="_blank"><li>GeoJson</li></a>
+                                <a href="https://restcountries.eu" target="_blank"><li>REST Countries</li></a>
+                            </ul>
+                        </li>
+                        <li>Vidéos
+                            <ul>
+                                <a href="https://www.pexels.com/fr-fr/@abraham-braun-1115122" target="_blank"><li>Abraham Braun</li></a>
+                                <a href="https://www.pexels.com/fr-fr/@peter-fowler-417939" target="_blank"><li>Peter Fowler</li></a>
+                                <a href="https://www.pexels.com/fr-fr/@themarcknight-1698600" target="_blank"><li>TheMarcKnight</li></a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modalPres" tabinex="-1" role="dialog" aria-labelledby="modalPres" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title">Document de présentation</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <embed src="images/presentation.pdf" width="100%" height="600" type='application/pdf'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/libs/jquery-3.4.1.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+</body>
+</html>

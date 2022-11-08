@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dev jam - Forêts 2D</title>
+    <link rel="icon" type="image/png" href="https://marill.dev/img/minimecool.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/libs/leaflet.css">
+    <link rel="stylesheet" href="../css/libs/Chart.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/2d.css">
+</head>
+<body>
+    <div id="map"></div>
+    <div class="w-50 d-flex justify-content-center my-4 fixed-bottom" id="divSlider">
+        <form class="w-100">
+            <input type="range" class="range-cool" min="0" max="5" id="rangeYear">
+        </form>
+    </div>
+    <div class="d-flex flex-column fixed-top-right py-3 px-3 text-info" id="legende">
+        <div id="blockAnnee">
+            <h3 class="w-100 text-center px-2" id="yearAffiche">Année</h3>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column justify-content-between text-right">
+                <P>100%</P>
+                <P>0%</P>
+            </div>
+            <div id="jauge"></div>
+        </div>
+        <div id="blockCompraison" class="mt-4" style="display: none">
+            <p>Comparer</p>
+            <div id="lstCompar" class="my-2"></div>
+            <button type="button" class="btn btn-info w-100" data-toggle="modal" data-target=".modalCompar" onclick="updateModalCompar()"><span class="fas fa-chart-line"></span></button>
+        </div>
+    </div>
+    <div class="modal fade modalPays" tabinex="-1" role="dialog" aria-labelledby="modalPays" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titreModalPays"><img id="infoFlag" src=""><span id="infoNom">Nom pays</span></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-around">
+                        <p><span class="fas fa-globe-europe" id="infoConIcon"></span> <span id="infoContinent"></span></p>
+                        <p><span class="fas fa-landmark"></span> <span id="infoCapitale"></span></p>
+                        <p><span class="fas fa-users"></span> <span id="infoPopulation"></span></p>
+                        <p><span class="fas fa-splotch"></span> <span id="infoSuperficie"></span> km²</p>
+                        <p><span class="fas fa-language"></span> <span id="infoLangues"></span></p>
+                    </div>
+                    <canvas id="forestChart" width="800" height="300"></canvas>
+                    <div>
+                        <h5 class="text-center" id="evoForet"><span id="evoForetTxt"></span>% entre <span id="evoForetMin"></span> et <span id="evoForetMax"></span></h5>
+                        <h5 class="text-center" id="evoError">Aucune donnée disponible pour ce pays</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade modalCompar" tabinex="-1" role="dialog" aria-labelledby="modalCompar" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-light">
+                <div class="modal-header">
+                    <h3 class="modal-title">Comparaison de plusieurs pays</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <canvas id="forestChartCompar" width="800" height="500"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="../index.html"><button type="button" class="btn btn-outline-secondary m-3 fixed-bottom"><span class="fas fa-home"></span> Accueil</button></a>
+    <script src="../js/libs/jquery-3.4.1.min.js"></script>
+    <script src="../js/libs/bootstrap.min.js"></script>
+    <script src="../js/libs/leaflet.js"></script>
+    <script src="../js/libs/d3.v5.min.js"></script>
+    <script src="../js/libs/countryConvert.js"></script>
+    <script src="../js/libs/moment.js"></script>
+    <script src="../js/libs/Chart.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/2d.js"></script>
+</body>
+</html>

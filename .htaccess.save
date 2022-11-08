@@ -1,0 +1,15 @@
+Header set Content-Security-Policy ""
+
+Header add Access-Control-Allow-Origin *
+Header add Vary: Origin
+Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header add Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"Header add Content-type "text/html; charset=utf-8"
+Header set By "Damien Marill"
+Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+Header set If-Modified-Since "Tue, 06 Aug 19 21:48:30 +0000"
+Header set Content-Language: fr-FR
+
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+Header set Referrer-Policy "same-origin"
